@@ -1,0 +1,217 @@
+local id = game.PlaceId
+if id == 2753915549 then
+World1 = true
+OldWorld = true
+elseif id == 4442272183 then
+World2 = true
+NewWorld = true
+elseif id == 7449423635 then
+World3 = true
+ThreeWorld = true
+end
+                     
+if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
+                            if World3 then
+                            
+                            for i, v in pairs(game.Players:GetPlayers()) do
+                                PlayersMin = i
+                            end
+                        
+                            if game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
+                                MirageMessage = '```Mirage is spawing : 🟢```'
+                            else
+                                MirageMessage = '```Mirage not spawn : ❌```'
+                            end
+                            JoinServer = 'game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,' ..
+                                '\'' .. tostring(game.JobId) .. '\'' .. ')'
+                                
+                            local GetWebhookMirage = "https://discord.com/api/webhooks/1192098284525854760/"
+                            local url = GetWebhookMirage.."wHF-PTFX2pHksRpCDz_YOlxZKh4mtPL413OlmFaC-DsAV0sEt1DA5uYfIWUi2Vu-CJOW"                                                                                                                
+                            local data = {
+                                ["username"] = 'Zen Hub',                                                                                                                                                                                                           
+                                ['content'] = '',--'<@&1192094985575739522>',                                                                                                                                                                                            
+                                ["avatar_url"] = "https://images-ext-1.discordapp.net/external/u9tnnmDGBDMO0KB-7X7byaucIZOhnrAxuygvQVVvGFc/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1189265387217490051/a_d21c49868a7545872e18696c32ac346e.gif", 
+                                ["embeds"] = {
+                                    {
+                                        ["description"] = "**__Mirage Finder__**",
+                                        ["color"] = tonumber(0x0000FF), -- color id		#
+                                        ["type"] = "rich",
+                                        ["fields"] = {
+                                            {
+                                                ["name"] = "[👥] Players Active",
+                                                ["value"] = '```' .. tostring(PlayersMin) .. '/12```'
+                                            },
+                                            {
+                                                ["name"] = "[📃] JobID",
+                                                ["value"] = '```' .. tostring(game.JobId) .. '```'
+                                            },
+                                            {
+                                                ["name"] = "[📁] Join Server",
+                                                ["value"] = '```' .. JoinServer .. '```',
+                                            },
+                                            {
+                                                ["name"] = "[🌲] Mirage Check",
+                                                ["value"] = MirageMessage,
+                                                ["inline"] = true
+                                            }
+                                        },
+                                        ["footer"] = {
+                                            ["text"] = "Zen Hub| Webhook", 
+                                        },
+                                        ["timestamp"] = DateTime.now():ToIsoDate(),
+                                    }
+                                },
+                            }
+                            local newdata = game:GetService("HttpService"):JSONEncode(data)
+                            local headers = { ["content-type"] = "application/json" }
+                            request = http_request or request or HttpPost or syn.request
+                            local abcdef = { Url = url, Body = newdata, Method = "POST", Headers = headers }
+                            request(abcdef)
+                            end
+                            end
+                            
+                            if World3 then
+                            local Moon = {
+                                ['8'] = "http://www.roblox.com/asset/?id=9709149431", -- 🌕
+                                ['7'] = "http://www.roblox.com/asset/?id=9709149052", -- 🌖
+                                ['6'] = "http://www.roblox.com/asset/?id=9709143733", -- 🌘
+                                ['5'] = "http://www.roblox.com/asset/?id=9709150401", -- 🌘
+                                ['4'] = "http://www.roblox.com/asset/?id=9709135895", -- 🌑
+                                ['3'] = "http://www.roblox.com/asset/?id=9709139597", -- 🌒
+                                ['2'] = "http://www.roblox.com/asset/?id=9709150086", -- 🌓
+                                ['1'] = "http://www.roblox.com/asset/?id=9709149680", -- 🌔
+                            };
+                            for i, v in pairs(Moon) do
+                                if game:GetService("Lighting").Sky.MoonTextureId == v then
+                                    MoonPercent = i / 8 * 100
+                                end
+                            end
+                            
+                            for i, v in pairs(game.Players:GetPlayers()) do
+                                PlayersMin = i
+                            end
+                            
+                            if game:GetService("Lighting").Sky.MoonTextureId == Moon['1'] then
+                                MoonIcon = '🌔'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['2'] then
+                                MoonIcon = '🌓'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['3'] then
+                                MoonIcon = '🌒'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['4'] then
+                                MoonIcon = '🌑'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['5'] then
+                                MoonIcon = '🌘'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['6'] then
+                                MoonIcon = '🌘'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['7'] then
+                                MoonIcon = '🌖'
+                            elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['8'] then
+                                MoonIcon = '🌕'
+                            end
+                            MoonMessage = '```' .. tostring(MoonPercent .. '%' .. ' : ' .. MoonIcon) .. '```'
+                            JoinServer = 'game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,' ..
+                                '\'' .. tostring(game.JobId) .. '\'' .. ')'
+                            local GetWebHook = "https://discord.com/api/webhooks/1192098284525854760/"
+                            local url = GetWebHook.."CL0jUG1Pv7JWnj4Lyj5LmBzs0DitpUx17W7YWCnitfzyaMN_i5273g0GZvM_go-xbXZc"                                                                                                           
+                            local data = {
+                                ["username"] = 'Zen Hub',                                                                                                                                                                                                          
+                                ['content'] = '',--'<@&1192095009898512414>',                                                                                                                                                                                             
+                                ["avatar_url"] = "https://images-ext-1.discordapp.net/external/u9tnnmDGBDMO0KB-7X7byaucIZOhnrAxuygvQVVvGFc/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1189265387217490051/a_d21c49868a7545872e18696c32ac346e.gif", 
+                                ["embeds"] = {
+                                    {
+                                        ["description"] = "**__Moon__**",
+                                        ["color"] = tonumber(0x0000FF), 
+                                        ["type"] = "rich",
+                                        ["fields"] = {
+                                            {
+                                                ["name"] = "[👥] Players Active",
+                                                ["value"] = '```' .. tostring(PlayersMin) .. '/12```'
+                                            },
+                                            {
+                                                ["name"] = "[📃] JobID",
+                                                ["value"] = '```' .. tostring(game.JobId) .. '```'
+                                            },
+                                            {
+                                                ["name"] = "[📁] Join Server",
+                                                ["value"] = '```' .. JoinServer .. '```',
+                                            },
+                                            {
+                                                ["name"] = "[🕑] Moon Check",
+                                                ["value"] = MoonMessage,
+                                                ["inline"] = true
+                                            },
+                                            
+                                        },
+                                        ["footer"] = {
+                                            ["text"] = "Zen Hub| Webhook", 
+                                        },
+                                        ["timestamp"] = DateTime.now():ToIsoDate(),
+                                    }
+                                },
+                            }
+                            local newdata = game:GetService("HttpService"):JSONEncode(data)
+                            local headers = { ["content-type"] = "application/json" }
+                            request = http_request or request or HttpPost or syn.request
+                            local abcdef = { Url = url, Body = newdata, Method = "POST", Headers = headers }
+                            request(abcdef)
+                            end
+                        
+                        
+                        if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
+                            if World3 then  
+                            for i, v in pairs(game.Players:GetPlayers()) do
+                                PlayersMin = i 
+                            end
+                            if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
+                                KitsuneMassasge = '```Kitsune Island is spawing : 🟢```'
+                            else
+                                KitsuneMassasge = '```Kitsune Island not spawn : ❌```'
+                            end
+                            
+                            JoinServer = 'game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId,' ..
+                                '\'' .. tostring(game.JobId) .. '\'' .. ')'
+                            
+                            local GetWebhookKitsune = "https://discord.com/api/webhooks/1192099417759678535/"
+                            local url = GetWebhookKitsune.."7Y9aVzGk1DA1zEk6Dp-4rq-Er733yR-stPuf-FNyb0RiAsv6S42QL0DDGcXfoxEWP4fx"                                                                                                                
+                            local data = {
+                                ["username"] = 'Zen Hub',                                                                                                                                                                                                           
+                                ['content'] = '',--'<@&1192095017196597258>',                                                                                                                                                                                            
+                                ["avatar_url"] = "https://images-ext-1.discordapp.net/external/u9tnnmDGBDMO0KB-7X7byaucIZOhnrAxuygvQVVvGFc/%3Fsize%3D1024/https/cdn.discordapp.com/icons/1189265387217490051/a_d21c49868a7545872e18696c32ac346e.gif", 
+                                ["embeds"] = {
+                                    {
+                                        ["description"] = "**__Kitsune Finder__**",
+                                        ["color"] = tonumber(0x0000FF), -- color id		#
+                                        ["type"] = "rich",
+                                        ["fields"] = {
+                                            {
+                                                ["name"] = "[👥] Players Active",
+                                                ["value"] = '```' .. tostring(PlayersMin) .. '/12```'
+                                            },
+                                            {
+                                                ["name"] = "[📃] JobID",
+                                                ["value"] = '```' .. tostring(game.JobId) .. '```'
+                                            },
+                                            {
+                                                ["name"] = "[📁] Join Server",
+                                                ["value"] = '```' .. JoinServer .. '```',
+                                            },
+                                            {
+                                                ["name"] = "[🦊] Kitsune Check",
+                                                ["value"] = KitsuneMassasge,
+                                                ["inline"] = true
+                                            }
+                                        },
+                                        ["footer"] = {
+                                            ["text"] = "Zen hub  | Webhhok", 
+                                        },
+                                        ["timestamp"] = DateTime.now():ToIsoDate(),
+                                    }
+                                },
+                            }
+                            local newdata = game:GetService("HttpService"):JSONEncode(data)
+                            local headers = { ["content-type"] = "application/json" }
+                            request = http_request or request or HttpPost or syn.request
+                            local abcdef = { Url = url, Body = newdata, Method = "POST", Headers = headers }
+                            request(abcdef)
+                            end
+                        end

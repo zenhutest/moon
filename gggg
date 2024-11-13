@@ -78,7 +78,7 @@ if game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseT
 		until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 	end
 ----------------------------------------------------------------------------------------------------------------------------------------
---local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+--local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/zenhutest/moon/refs/heads/main/gggg"))()
 ----------------------------------------------------------------------------------------------------------------------------------------
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -5074,9 +5074,13 @@ local STOPRL = require(game:GetService("ReplicatedStorage").CombatFramework.RigL
 
 local AttackList = {"0", "0.1", "0.15", "0.155", "0.16", "0.165", "0.17", "0.175", "0.18", "0.185"}
 _G.FastAttackDelay = "0.175"
-Settings:AddDropdown("Seleact Attack Delay", AttackList,function(SimpRose)
-    _G.FastAttackDelay = SimpRose
-end)
+
+    Settings:AddDropdown("Seleact Attack Delay", AttackList,function(value)
+        _G.FastAttackDelay = value
+    end)
+
+
+
 spawn(function()
     while wait(.1) do
         if _G.FastAttackDelay then

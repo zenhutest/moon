@@ -1806,15 +1806,15 @@ function SectionInfo:Toggle1(ToggleName,ToggleDefault,Callback)
 				Toggle_Text.BackgroundTransparency = 1.000
 				Toggle_Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				Toggle_Text.BorderSizePixel = 0
-				Toggle_Text.Position = UDim2.new(0.16999981, 0, 0.5, 0)
-				Toggle_Text.Size = UDim2.new(1.14300003, 0, 0.324999976, 0)
+				Toggle_Text.Position = UDim2.new(0.14399981, 0, 0.32, 0)
+				Toggle_Text.Size = UDim2.new(1.13500003, 0, 0.424999976, 0)
 				Toggle_Text.Font = Enum.Font.GothamBold
 				Toggle_Text.Text = TextName
 				Toggle_Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 				Toggle_Text.TextSize = 14.000
 				Toggle_Text.TextXAlignment = Enum.TextXAlignment.Left
 				Toggle_Text.ZIndex = 6
-				Toggle_Text.TextScaled = false
+				Toggle_Text.TextScaled = true
 
 				Toggle_Icon.Name = "Toggle_Icon"
 				Toggle_Icon.Parent = Toggle

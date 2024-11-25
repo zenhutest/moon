@@ -93,8 +93,8 @@ local Alc = {
 		['MainColor'] = Color3.fromRGB(221,160,221),
 		['DropColor'] = Color3.fromRGB(121,111,121),
 		['UI Size'] = UserInputService.TouchEnabled 
-			and UDim2.new(0.15, 500, 0.15, 300)   -- Smaller size for mobile
-			or UDim2.new(0.1, 400, 0.1, 250) -- Larger size for PC
+			and UDim2.new(0.1, 400, 0.1, 250)   -- Smaller size for mobile
+			or UDim2.new(0.15, 500, 0.15, 300) -- Larger size for PC
 	},
 	CoreGui = game:FindFirstChild('CoreGui') or game.Players.LocalPlayer.PlayerGui,
 	Windows = {},

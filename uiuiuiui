@@ -1757,7 +1757,7 @@ function SectionInfo:Toggle1(ToggleName,ToggleDefault,Callback)
 					return Config
 				end
 
-				function  SectionInfo:AddToggle(TextName,default,callback)
+				function  SectionInfo:AddToggle1(TextName,default,callback)
 				local Toggle = Instance.new("Frame")
 				local UICorner_Toggle = Instance.new("UICorner")
 				local Toggle_Click = Instance.new("TextButton")
@@ -1868,7 +1868,7 @@ function SectionInfo:Toggle1(ToggleName,ToggleDefault,Callback)
 					end)
 				end
 
-				function SectionInfo:AddToggle1(ToggleName,ToggleDefault,Callback)
+				function SectionInfo:AddToggle(ToggleName,ToggleDefault,Callback)
 					local Toggle = Instance.new("Frame")
 					local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 					local MainFrame = Instance.new("Frame")
@@ -2009,6 +2009,12 @@ function SectionInfo:Toggle1(ToggleName,ToggleDefault,Callback)
 							Callback(ToggleDefault)
 						end
 					end)
+
+					if ToggleDefault == true then
+						ToggleDefault = true
+						Onv(ToggleDefault)
+						pcall(Callback,ToggleDefault)
+					end
 
 					SectionInfo:Update()
 
